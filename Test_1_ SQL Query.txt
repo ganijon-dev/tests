@@ -1,0 +1,7 @@
+   
+ SELECT name, department, salary
+ FROM Employee
+ WHERE salary IN 
+ 	(SELECT max(salary) AS salary
+	 From Employee
+	 Group By department);
