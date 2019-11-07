@@ -32,7 +32,7 @@ def image_downloader(year, month, resolution):
 
     content = html.fromstring(html=resp.text)
 
-    current_url_selection = "//a[contains(text(),'{}')]/@href".format(resolution)   # Selecting Required Image Links
+    current_url_selection = "//a[(text()='{}')]/@href".format(resolution)   # Selecting Required Image Links
 
     wallpaper_links = content.xpath(current_url_selection)
 
